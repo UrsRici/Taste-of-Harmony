@@ -378,7 +378,7 @@
     color: var(--black);
   }
   
-  .btn-secondary::before { background-color: var(--smoky-black-1); }
+  .btn-secondary::before { background-color: #00001c; }
   
   .btn-secondary .text-2 { color: var(--white); }
   
@@ -467,7 +467,7 @@
   }
   
   .input-field {
-    background-color: var(--eerie-black-2);
+    background-color: #00001c;
     color: var(--white);
     height: 56px;
     padding: 10px 20px;
@@ -491,6 +491,7 @@
     padding-inline-start: 40px;
     appearance: none;
     cursor: pointer;
+    background-color: #00001c;
   }
   
   .icon-wrapper ion-icon {
@@ -2284,10 +2285,10 @@
     display: none;
   }
 }
-/*
+
 main {
-  background-color: #303030;
-}*/
+  background-color: #00001c;
+}
 
 /*booking persoane*/
 
@@ -2327,9 +2328,9 @@ main {
   -ms-border-radius: 50%; 
 }
 .form_radio input:checked + label {
-  background-color: #111;
+  background-color: #00001c;
   color: #FFF;
-  border-color: #111;
+  border-color: #00001c;
   z-index: 1; 
   text-align: center;
 }
@@ -2374,7 +2375,7 @@ main {
   -o-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   font-size: 15px;
-  color: #222;
+  color: #00001c;
   font-weight: bold; 
 }
 
