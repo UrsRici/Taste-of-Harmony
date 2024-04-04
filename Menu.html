@@ -170,6 +170,42 @@
 
     <main>
       <div>
+        <!--Pop Modal-->
+        <div id="#modal"  class="modal">
+          <div class="modal_container">
+            <div class="modal_img">
+              <img src="assets/images/hero-slider-1.jpg" alt="">
+            </div>
+            <div class="modal_body">
+
+              <button onclick="active_item()" data-modal-close>&times;</button>
+
+              <img src="assets/images/badge-1.png" alt="badge">
+
+              <p class="">Special Dish</p>
+
+              <h2 class="">Lobster Tortellini</h2>
+
+              <p class="section-text">
+                Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the
+                industrys standard dummy text ever since the when an unknown printer took a galley of type.
+              </p>
+
+              <div class="">
+                <span class="">$20.00</span>
+              </div>
+
+              <a href="#" class="btn btn-primary">
+                <span class="text text-1">View All Menu</span>
+                <span class="text text-2" aria-hidden="true">View All Menu</span>
+              </a>
+            
+            </div>
+            
+          </div>
+        </div>
+        <div onclick="active_item()" id="#modal_overlay" class="modal_overlay"></div>
+
         <!--#Categorii-->
         <section style="padding-top: 200px;" class="section service bg-black-10 text-center" aria-label="service">
           <div class="container">
@@ -345,16 +381,16 @@
               <li>
                 <div class="menu-card hover:card">
 
-                  <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                    <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Greek Salad"
+                  <figure onclick="active_item()" class="card-banner img-holder" style="--width: 100; --height: 100;">
+                    <img src="assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Greek Salad"
                       class="img-cover">
                   </figure>
 
                   <div>
-
+                    
                     <div class="title-wrapper">
                       <h3 class="title-3">
-                        <a href="#" class="card-title">Greek Salad</a>
+                        <a onclick="active_item()" class="card-title">Greek Salad</a>
                       </h3>
 
                       <span class="badge label-1">Seasonal</span>
@@ -1439,50 +1475,6 @@
         </section>
       </div>
 
-
-      <!--SPECIAL DISH-->
-
-      <section class="special-dish text-center" aria-labelledby="dish-label">
-
-        <div class="special-dish-banner">
-          <img src="./assets/images/special-dish-banner.jpg" width="940" height="900" loading="lazy" alt="special dish"
-            class="img-cover">
-        </div>
-
-        <div class="special-dish-content bg-black-10">
-          <div class="container">
-
-            <img src="./assets/images/badge-1.png" width="28" height="41" loading="lazy" alt="badge" class="abs-img">
-
-            <p class="section-subtitle label-2">Special Dish</p>
-
-            <h2 class="headline-1 section-title">Lobster Tortellini</h2>
-
-            <p class="section-text">
-              Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the
-              industrys standard dummy text ever since the when an unknown printer took a galley of type.
-            </p>
-
-            <div class="wrapper">
-              <del class="del body-3">$40.00</del>
-
-              <span class="span body-1">$20.00</span>
-            </div>
-
-            <a href="#" class="btn btn-primary">
-              <span class="text text-1">View All Menu</span>
-
-              <span class="text text-2" aria-hidden="true">View All Menu</span>
-            </a>
-
-          </div>
-        </div>
-
-        <img src="./assets/images/shape-4.png" width="179" height="359" loading="lazy" alt="" class="shape shape-1">
-
-        <img src="./assets/images/shape-9.png" width="351" height="462" loading="lazy" alt="" class="shape shape-2">
-
-      </section>
     </main> 
 
     <!--#BACK TO TOP-->
@@ -1490,9 +1482,11 @@
       <p class="back-top-arrow">^</p>
     </a>
 
+      
     <!--custom js link-->
     <script src="./assets/js/script.js"></script>
+    <script src="assets/js/Menu.js"></script>
 
   </body>
-
+    
 </html>

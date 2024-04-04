@@ -172,7 +172,7 @@
   }
   
   body {
-    background-color: var(--eerie-black-1);
+    background-color: #00001c;
     color: var(--white);
     font-family: var(--fontFamily-dm_sans);
     font-size: var(--fontSize-body-4);
@@ -306,6 +306,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    cursor: pointer;
   }
   
   .section-subtitle {
@@ -931,7 +932,7 @@
   
   .service-card:is(:hover, :focus-within) .card-banner { transform: scale(1.05); }
   
-  .service .card-title { margin-block-end: 12px; }
+  .service .card-title { margin-block-end: 12px; cursor: pointer;}
   
   
   
@@ -995,44 +996,6 @@
     animation: rotate360 15s linear infinite;
   }
   
-  
-  
-  
-  
-  /*-----------------------------------*\
-    #SPECIAL DISH
-  \*-----------------------------------*/
-  
-  .special-dish-content { padding-block: 70px; }
-  
-  .special-dish .abs-img {
-    margin-inline: auto;
-    margin-block-end: 12px;
-  }
-  
-  .special-dish .section-text { margin-block: 16px 40px; }
-  
-  .special-dish-content .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-block-end: 40px;
-  }
-  
-  .special-dish-content .del {
-    text-decoration: none;
-    color: var(--davys-grey);
-  }
-  
-  .special-dish-content .span { color: var(--gold-crayola); }
-  
-  .special-dish .btn { margin-inline: auto; }
-  
-  
-  
-  
-  
   /*-----------------------------------*\
     #MENU
   \*-----------------------------------*/
@@ -1061,7 +1024,7 @@
     border-radius: var(--radius-24);
   }
   
-  .menu-card .card-title { transition: var(--transition-1); }
+  .menu-card .card-title { transition: var(--transition-1); cursor: pointer;}
   
   .menu-card .card-title:is(:hover, :focus-visible) { color: var(--gold-crayola); }
   
@@ -2289,6 +2252,9 @@
 main {
   background-color: #00001c;
 }
+body{
+  background-color: #00001c;
+}
 
 /*booking persoane*/
 
@@ -2383,3 +2349,93 @@ main {
   margin-right: 85px;
 }
 
+/*-----------------------------------*\
+    #SPECIAL DISH
+  \*-----------------------------------*/
+  
+.special-dish-content { padding-block: 70px; }
+
+.special-dish .abs-img {
+  margin-inline: auto;
+  margin-block-end: 12px;
+}
+
+.special-dish .section-text { margin-block: 16px 40px; }
+
+.special-dish-content .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-block-end: 40px;
+}
+  
+.special-dish-content .del {
+  text-decoration: none;
+  color: var(--davys-grey);
+}
+  
+.special-dish-content .span { color: var(--gold-crayola); }
+  
+.special-dish .btn { margin-inline: auto; }
+
+/*modal pop*/
+
+.modal{
+  padding: 30px;
+  position: fixed;
+  max-width: 1400px;
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  z-index: 200;
+  transition: 200ms ease-in-out;
+  transform: translate(-50%, -40%) scale(0)
+}
+.modal.active{
+  transform: translate(-50%, -40%) scale(1)
+}
+.modal_container{
+  position: relative;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-radius: 20px;
+  background-color:#00001c ;
+}
+.modal_body{
+  position: relative;
+  text-align: center;
+  padding: 50px 100px;
+}
+.modal_body button{
+  color: #ffffff;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.modal_img{
+  position: relative;
+  border-radius: 20px 0 0 20px;
+}
+.modal_img img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+}
+.modal_overlay{
+  z-index: -200;
+  transition: 200ms ease-in-out;
+  position: fixed;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+.modal_overlay.active{
+  z-index: 199;
+  opacity: 1;
+  pointer-events: all;
+}
