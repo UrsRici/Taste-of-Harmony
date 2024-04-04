@@ -198,15 +198,13 @@
               <form action="#">
                 <div class="input-boxes">
                   <div class="input-box">
-                    <i class="fas fa-envelope"></i>
-                    <input type="text" placeholder="Enter your email" required>
+                    <input id="login_email" type="text" placeholder="Enter your email" required>
                   </div>
                   <div class="input-box">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Enter your password" required>
+                    <input id="login_password" type="password" placeholder="Enter your password" required>
                   </div>
                   <div class="button input-box">
-                    <a href="login.html" class="btn btn-secondary">
+                    <a onclick="login()" class="btn btn-secondary">
                       <span style="color: black;" class="text text-1">Submit</span>
                       <span class="text text-2" aria-hidden="true">Submit</span>
                     </a>
@@ -232,7 +230,7 @@
                     <input type="password" placeholder="Enter your password" required>
                   </div>
                   <div class="button input-box">
-                    <a href="login.html" class="btn btn-secondary">
+                    <a onclick="signin()" class="btn btn-secondary">
                       <span style="color: black;" class="text text-1">Submit</span>
                       <span class="text text-2" aria-hidden="true">Submit</span>
                     </a>
@@ -253,8 +251,8 @@
     </a>
 
     <!--custom js link-->
-    <script src="./assets/js/script.js"></script>
-
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/Login.js"></script>
   </body>
 
 </html>

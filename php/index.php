@@ -11,14 +11,18 @@
 
         $sql = "SELECT * FROM user";
         $result = mysqli_query($conn, $sql);
-        $row = $result->fetch_assoc();
-        echo json_encode($row["email"])
+        $rows = array();
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $rows[] = $row;
+        }
+        echo json_encode($rows);
+        if(isset($_POST)){
+            $data = file_get_contents("php://input");
+            $user = json_decode($data, true);
+            echo json_encode($user);
+        }
         ?>
-
-        <div id="data" data-row='<?php echo json_encode($row['email']); ?>'></div>
-        
-        <!-- Include your Home.js script -->
-        <script src="../assets/js/Home.js"></script>
     </body>
 
 </html>

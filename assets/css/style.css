@@ -375,6 +375,7 @@
   }
   
   .btn-secondary {
+    cursor: pointer;
     background-color: var(--gold-crayola);
     color: var(--black);
   }
