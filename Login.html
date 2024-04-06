@@ -195,19 +195,19 @@
             <div class="form-content">
               <div class="login-form">
                 <div class="title">Log in</div>
-              <form action="#">
+              <form action="php/login.php" method="post">
                 <div class="input-boxes">
                   <div class="input-box">
-                    <input id="login_email" type="text" placeholder="Enter your email" required>
+<!--username-->     <input id="username" name="username" type="text" placeholder="Enter your username" required>
                   </div>
                   <div class="input-box">
-                    <input id="login_password" type="password" placeholder="Enter your password" required>
+<!--password-->     <input id="password" name="password" type="password" placeholder="Enter your password" required>
                   </div>
                   <div class="button input-box">
-                    <a onclick="login()" class="btn btn-secondary">
+                    <button style="left: 50%;transform: translateX(-50%);" class="btn btn-secondary">
                       <span style="color: black;" class="text text-1">Submit</span>
                       <span class="text text-2" aria-hidden="true">Submit</span>
-                    </a>
+                    </button>
                   </div>
                   <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
                 </div>
@@ -215,31 +215,31 @@
           </div>
             <div class="signup-form">
               <div class="title">Sign up</div>
-            <form action="#">
-                <div class="input-boxes">
-                  <div class="input-box">
-                    <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Enter your name" required>
+              <form action="php/signup.php" method="post">
+                  <div class="input-boxes">
+                    <div class="input-box">
+                      <i class="fas fa-user"></i>
+  <!--Name-->         <input  name="username" type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-box">
+                      <i class="fas fa-envelope"></i>
+  <!--email-->        <input name="email" type="text" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                      <i class="fas fa-lock"></i>
+  <!--password-->     <input name="password" type="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="button input-box">
+                      <button style="left: 50%;transform: translateX(-50%);" class="btn btn-secondary">
+                        <span style="color: black;" class="text text-1">Submit</span>
+                        <span class="text text-2" aria-hidden="true">Submit</span>
+                      </button>
+                    </div>
+                    <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
                   </div>
-                  <div class="input-box">
-                    <i class="fas fa-envelope"></i>
-                    <input type="text" placeholder="Enter your email" required>
-                  </div>
-                  <div class="input-box">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Enter your password" required>
-                  </div>
-                  <div class="button input-box">
-                    <a onclick="signin()" class="btn btn-secondary">
-                      <span style="color: black;" class="text text-1">Submit</span>
-                      <span class="text text-2" aria-hidden="true">Submit</span>
-                    </a>
-                  </div>
-                  <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
-                </div>
-          </form>
-        </div>
-        </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
 

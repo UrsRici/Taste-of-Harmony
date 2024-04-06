@@ -1,8 +1,11 @@
 <?php
-
-$conn = mysqli_connect('localhost', 'root', '', 'restaurant');
-
-if (!$conn) {
-    die("Conexiunea la baza de date a eșuat: " . mysqli_connect_error());
-}
-echo "Conexiunea la baza de date a fost realizată cu succes!";
+    $dsn = "mysql:host = localhost; dbname=restaurant";
+    $dbusername = "root";
+    $dbpassword = "";
+    
+    try {
+        $pdo =  new PDO($dsn, $dbusername. $dbpassword);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+        echo "CONNECTION FAILED: " . $e->getMessage();
+    }
