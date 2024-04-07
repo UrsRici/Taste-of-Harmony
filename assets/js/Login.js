@@ -16,7 +16,7 @@ document.getElementById('form_signup').addEventListener('submit', function(event
 
 function is_error(){
     const signup_info = JSON.parse(localStorage.getItem("signup_info"));
-    const acount_created = true;
+    acount_created = true;
     document.getElementById("error_1").innerHTML = "";
     document.getElementById("error_2").innerHTML = "";
     document.getElementById("error_3").innerHTML = "";
