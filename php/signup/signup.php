@@ -6,9 +6,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pwd = $_POST["password"];
 
     try {
-        require_once "../connect.inc.php";
-        require_once "signup_model.inc.php";
-        require_once "signup_contr.inc.php";
+        require_once "../connect.php";
+        require_once "signup_model.php";
+        require_once "signup_contr.php";
         
         // EARAROR HANDLERS
         $errors = [];
@@ -27,21 +27,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $errors = json_encode($errors);
             echo $errors;
         } else {
-            $pwd = password_hash($pwd, PASSWORD_DEFAULT);
-            $query = "INSERT INTO user (name, email, password) VALUES (:name, :email, :pwd);";
+            set_user($pdo, $username, $pwd, $email);
 
-            $stmt = $pdo->prepare($query);
-
-            $stmt->bindParam(":name", $username);
-            $stmt->bindParam(":email", $email);
-            $stmt->bindParam(":pwd", $pwd);
-            $stmt->execute();
-
-            $signup_info = "The account was created";
+            $signup_info = "Tank you " . $username . " for signing up!";
             echo json_encode($signup_info);
 
-            $pdo = null;
-            $stmt = null;
             die();
         }
 

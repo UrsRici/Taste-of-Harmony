@@ -196,7 +196,7 @@
             <div class="form-content">
               <div class="login-form">
                 <div class="title">Log in</div>
-              <form id="form_login" action="php/login.php" method="post">
+              <form id="form_login" method="post">
                 <div class="input-boxes">
                   <div class="input-box">
 <!--username-->     <input id="username" name="username" type="text" placeholder="Enter your username" >
@@ -213,6 +213,9 @@
                   <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
                 </div>
             </form>
+            <p id="error_login_1" style="color: red;text-align: center;"></p>
+            <p id="error_login_2" style="color: red;text-align: center;"></p>
+            <p id="error_login_3" style="color: red;text-align: center;"></p>
           </div>
             <div class="signup-form">
               <div class="title">Sign up</div>
@@ -239,9 +242,9 @@
                   <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
                 </div>
               </form>
-              <p id="error_1" style="color: red;text-align: center;"></p>
-              <p id="error_2" style="color: red;text-align: center;"></p>
-              <p id="error_3" style="color: red;text-align: center;"></p>
+              <p id="error_signup_1" style="color: red;text-align: center;"></p>
+              <p id="error_signup_2" style="color: red;text-align: center;"></p>
+              <p id="error_signup_3" style="color: red;text-align: center;"></p>
             </div>
           </div>
         </div>
@@ -256,7 +259,7 @@
 
     <!--custom js link-->
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/Login.js"></script>
+    <script src="assets/js/login.js"></script>
   </body>
 
 </html>
