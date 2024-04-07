@@ -152,10 +152,11 @@
 
         </nav>
 
-        <a href="login.html" class="btn btn-secondary">
-          <span class="text text-1">LogIn</span>
-          <span class="text text-2" aria-hidden="true">LogIn</span>
+        <a onclick="login_signup()" class="btn btn-secondary">
+          <span id="login_signup_1" class="text text-1"></span>
+          <span id="login_signup_2"  class="text text-2" aria-hidden="true"></span>
         </a>
+
 
         <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
           <span class="line line-1"></span>
@@ -195,13 +196,13 @@
             <div class="form-content">
               <div class="login-form">
                 <div class="title">Log in</div>
-              <form action="php/login.php" method="post">
+              <form id="form_login" action="php/login.php" method="post">
                 <div class="input-boxes">
                   <div class="input-box">
-<!--username-->     <input id="username" name="username" type="text" placeholder="Enter your username" required>
+<!--username-->     <input id="username" name="username" type="text" placeholder="Enter your username" >
                   </div>
                   <div class="input-box">
-<!--password-->     <input id="password" name="password" type="password" placeholder="Enter your password" required>
+<!--password-->     <input id="password" name="password" type="password" placeholder="Enter your password" >
                   </div>
                   <div class="button input-box">
                     <button style="left: 50%;transform: translateX(-50%);" class="btn btn-secondary">
@@ -215,29 +216,32 @@
           </div>
             <div class="signup-form">
               <div class="title">Sign up</div>
-              <form action="php/signup.php" method="post">
-                  <div class="input-boxes">
-                    <div class="input-box">
-                      <i class="fas fa-user"></i>
-  <!--Name-->         <input  name="username" type="text" placeholder="Enter your name" required>
-                    </div>
-                    <div class="input-box">
-                      <i class="fas fa-envelope"></i>
-  <!--email-->        <input name="email" type="text" placeholder="Enter your email" required>
-                    </div>
-                    <div class="input-box">
-                      <i class="fas fa-lock"></i>
-  <!--password-->     <input name="password" type="password" placeholder="Enter your password" required>
-                    </div>
-                    <div class="button input-box">
-                      <button style="left: 50%;transform: translateX(-50%);" class="btn btn-secondary">
-                        <span style="color: black;" class="text text-1">Submit</span>
-                        <span class="text text-2" aria-hidden="true">Submit</span>
-                      </button>
-                    </div>
-                    <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+              <form id="form_signup" method="post">
+                <div class="input-boxes">
+                  <div class="input-box">
+                    <i class="fas fa-user"></i>
+<!--Name-->         <input name="username" type="text" placeholder="Enter your name" >
                   </div>
+                  <div class="input-box">
+                    <i class="fas fa-envelope"></i>
+<!--email-->        <input name="email" type="text" placeholder="Enter your email" >
+                  </div>
+                  <div class="input-box">
+                    <i class="fas fa-lock"></i>
+<!--password-->     <input name="password" type="password" placeholder="Enter your password" >
+                  </div>
+                  <div class="button input-box">
+                    <button style="left: 50%; transform: translateX(-50%);" class="btn btn-secondary">
+                      <span style="color: black;" class="text text-1">Submit</span>
+                      <span class="text text-2" aria-hidden="true">Submit</span>
+                    </button>
+                  </div>
+                  <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+                </div>
               </form>
+              <p id="error_1" style="color: red;text-align: center;"></p>
+              <p id="error_2" style="color: red;text-align: center;"></p>
+              <p id="error_3" style="color: red;text-align: center;"></p>
             </div>
           </div>
         </div>

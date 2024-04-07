@@ -1,4 +1,5 @@
 <?php
+$result = [];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
@@ -14,13 +15,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $result = $result[0];
         $pws = $result["password"];
-        echo $pws;
-        echo "<br>";
-        echo $password;
         if(password_verify($password, $pws)){
-            echo "True";
-        }else{
-            echo "False";
+            unset($result["password"]);
+            echo json_encode($result);
         }
 
         /*$pdo = null;
