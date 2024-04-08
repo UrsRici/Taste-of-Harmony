@@ -34,7 +34,26 @@ function change(id){
   }
 }
 
-function booking() {
-  // Codul pentru manipularea evenimentului de rezervare
-  console.log("Booking function called!");
+if(JSON.parse(localStorage.getItem("user"))) {
+  document.getElementById("name").value = JSON.parse(localStorage.getItem("user"))["name"];
 }
+function booking() {
+  if(!JSON.parse(localStorage.getItem("user"))){
+    alert("You need to login to book a table!")
+  }
+}
+
+//Form Submit
+document.getElementById('form_booking').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevents the default form submission
+  
+  fetch('php/login/login.php', {
+      method: 'POST',
+      body: new FormData(this)
+  })
+  .then(response => response.json())
+  .then(data => {
+      const login_info = data;
+      console.log(login_info);
+  });
+});
