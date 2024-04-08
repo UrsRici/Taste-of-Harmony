@@ -55,13 +55,11 @@ document.getElementById('form_login').addEventListener('submit', function(event)
     .then(response => response.json())
     .then(data => {
         const login_info = data;
-        signup_error(login_info);
-
-        localStorage.setItem("user", JSON.stringify(login_info));
+        login_error(login_info); 
     });
 });
 
-function signup_error(login_info) 
+function login_error(login_info) 
 {
     acount_created = true;
     document.getElementById("error_login_1").innerHTML = "";
@@ -81,6 +79,7 @@ function signup_error(login_info)
         acount_created = false;
     }
     if (acount_created) {
+        localStorage.setItem("user", JSON.stringify(login_info));
         alert("Welcome back " + login_info["name"] +"!");
         window.location.href = "Home.html";
     }

@@ -1,3 +1,5 @@
+
+
 function change(id){
     element = document.getElementById(id);
     if(element.classList != "button_active")

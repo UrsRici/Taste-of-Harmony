@@ -22,6 +22,8 @@ function is_username_correct(object $pdo, string $username)
 
 function is_password_correct(object $pdo, string $username, string $pwd)
 {
+    if (!get_username($pdo, $username)) { return true; }
+
     $userData = get_userData($pdo, $username);
     
     if (!password_verify($pwd, $userData["password"])) {

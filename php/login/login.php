@@ -4,7 +4,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     //$email = $_POST["email"];
     $pwd = $_POST["password"];
-
     try {
         require_once "../connect.php";
         require_once "login_model.php";
