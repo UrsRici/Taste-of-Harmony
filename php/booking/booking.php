@@ -12,9 +12,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         require_once "../connect.php";
         require_once "booking_model.php";
         require_once "booking_contr.php";
-        $data = json_encode($data);
-        echo $data;
 
+        // EARAROR HANDLERS
+        $errors = [];
+
+        if (is_input_empty($data["phon"], $data["date"], $data["time"])) {
+            $errors["empty_input"] = "Fill in all fields!";
+        }
+        if (is_phon_invalid($data["phon"])){
+            $errors["invalid_phon"] = "Incorrect phone number!";
+        }
+        if (!is_table_available($pdo, $data)){
+            $errors["no_table"] = "No tables available!";
+        }
+
+        if ($errors) {
+            $errors = json_encode($errors);
+            echo $errors;
+        } else {
+            
+            set_reservation($pdo, $data);
+            $data = "Reservation registered successfully!";
+            echo json_encode($data);
+
+        die();
+        }
 
 
     } catch (PDOException $e) {

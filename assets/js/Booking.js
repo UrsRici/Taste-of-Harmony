@@ -47,7 +47,7 @@ function booking() {
 document.getElementById('form_booking').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevents the default form submission
   
-  fetch('php/login/login.php', {
+  fetch('php/booking/booking.php', {
       method: 'POST',
       body: new FormData(this)
   })
