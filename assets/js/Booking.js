@@ -57,3 +57,18 @@ document.getElementById('form_booking').addEventListener('submit', function(even
       console.log(login_info);
   });
 });
+
+//Date change
+document.getElementById('date').addEventListener('onchange', function(event) {
+  event.preventDefault(); // Prevents the default form submission
+  
+  fetch('php/booking/booking.php', {
+      method: 'POST',
+      body: new FormData(this)
+  })
+  .then(response => response.json())
+  .then(data => {
+      const login_info = data;
+      console.log(login_info);
+  });
+});

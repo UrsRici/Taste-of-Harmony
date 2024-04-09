@@ -8,8 +8,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $data["mess"] = $_POST["message"];
     $data["pers"] = $_POST["number_people"];
 
+
+    if (isset($_POST['submit_button_name'])){
+        echo "Submit!";
+    } else if (isset($_POST['date_field_name'])) {
+        echo "Onchange!";
+    }
+
     try {
-        require_once "../connect.php";
+
+
+        /*require_once "../connect.php";
         require_once "booking_model.php";
         require_once "booking_contr.php";
 
@@ -36,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo json_encode($data);
 
         die();
-        }
+        }*/
 
 
     } catch (PDOException $e) {
