@@ -30,10 +30,12 @@
       <p class="text">Grill</p>
     </div>
 
+
+
     <!--#TOP BAR-->
     <div class="topbar">
       <div class="container">
-
+        
         <address class="topbar-item">
           <div class="icon">
             <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
@@ -174,7 +176,7 @@
         <div class="container">
           <div style="position: relative;" class="form reservation-form bg-black-10">
             
-            <form action="php/booking/booking.php" method="post" onclick="booking()" id="form_booking" style="background-image: url(assets/images/form-img.jpg);" class="form-left">
+            <form onclick="booking()" id="form_booking" style="background-image: url(assets/images/form-img.jpg);" class="form-left">
               
                 <h2 class="headline-1 text-center">Online Reservation</h2>
 
@@ -198,21 +200,22 @@
                   <div class="icon-wrapper">
                     <select name="time" class="input-field">
                     <option value="" hidden>Select the time:</option>
-                    <option hidden value="08:00:00">08 : 00</option>
-                    <option hidden value="09:00:00">09 : 00</option>
-                    <option hidden value="10:00:00">10 : 00</option>
-                    <option hidden value="11:00:00">11 : 00</option>
-                    <option hidden value="12:00:00">12 : 00</option>
-                    <option hidden value="13:00:00">13 : 00</option>
-                    <option hidden value="14:00:00">14 : 00</option>
-                    <option hidden value="15:00:00">15 : 00</option>
-                    <option hidden value="16:00:00">16 : 00</option>
-                    <option hidden value="17:00:00">17 : 00</option>
-                    <option hidden value="18:00:00">18 : 00</option>
-                    <option hidden value="19:00:00">19 : 00</option>
-                    <option hidden value="20:00:00">20 : 00</option>
-                    <option hidden value="21:00:00">21 : 00</option>
-                    <option hidden value="22:00:00">22 : 00</option>
+                    <option value="" >Please a date first!</option>
+                    <option id="0" hidden value="08:00:00">08 : 00</option>
+                    <option id="1" hidden value="09:00:00">09 : 00</option>
+                    <option id="2" hidden value="10:00:00">10 : 00</option>
+                    <option id="3" hidden value="11:00:00">11 : 00</option>
+                    <option id="4" hidden value="12:00:00">12 : 00</option>
+                    <option id="5" hidden value="13:00:00">13 : 00</option>
+                    <option id="6" hidden value="14:00:00">14 : 00</option>
+                    <option id="7" hidden value="15:00:00">15 : 00</option>
+                    <option id="8" hidden value="16:00:00">16 : 00</option>
+                    <option id="9" hidden value="17:00:00">17 : 00</option>
+                    <option id="10" hidden value="18:00:00">18 : 00</option>
+                    <option id="11" hidden value="19:00:00">19 : 00</option>
+                    <option id="12" hidden value="20:00:00">20 : 00</option>
+                    <option id="13" hidden value="21:00:00">21 : 00</option>
+                    <option id="14" hidden value="22:00:00">22 : 00</option>
                     </select>
                   </div>
 
@@ -246,6 +249,8 @@
                     </div>
                   </div>
                 </div>
+
+                <p id="error_reservation" style="color: red;font-size: large; text-align: center; background-color: var(--gold-crayola);"></p>
 
                 <button type="submit" class="btn btn-secondary">
                   <span class="text text-1">Book A Table</span>

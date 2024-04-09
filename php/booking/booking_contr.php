@@ -39,3 +39,17 @@ function is_table_available(object $pdo, array $data)
         return true;
     }
 }
+
+function get_times(object $pdo, string $date)
+{
+    $times = [];
+    $time = "08:00:00";
+    for ($i = 0; $i < 15; $i++)
+    {
+        if (get_tables_id($pdo, $date, $time)) {
+            $times[$time] = $time;
+        }
+        $time = date('H:i:s', strtotime($time . '+1 hour'));
+    }  
+    return $times;
+}
