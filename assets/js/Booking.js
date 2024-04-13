@@ -106,12 +106,12 @@ document.getElementById('date').addEventListener("change", function(event) {
   .then(response => response.json())
   .then(data => {
       const time_info = data;
-      desplay_times(time_info);
+      display_times(time_info);
       //console.log(time_info);
   });
 });
 
-function desplay_times(time_info)
+function display_times(time_info)
 {
   var options = document.querySelectorAll('.input-field option');
 

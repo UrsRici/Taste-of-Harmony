@@ -31,7 +31,7 @@ function get_userId(object $pdo, string $name)
     return $result["id"];
 }
 
-// returneaza roare rezervariel de la o anumita data si ora
+// returneaza toate rezervarile de la o anumita data si ora
 function get_reservations(object $pdo, string $date, string $time)
 {
     $query = "SELECT * FROM reservations WHERE date = :date AND time = :time;";

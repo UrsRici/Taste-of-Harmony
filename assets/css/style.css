@@ -448,6 +448,7 @@
     display: none;
     position: absolute;
     max-width: max-content;
+    margin-top: 135px;
     z-index: -1;
   }
   
@@ -610,7 +611,7 @@
   
   .header.active {
     padding-block: 20px;
-    background-color: var(--eerie-black-4);
+    background-color: #00001c;
     border-color: var(--black-alpha-15);
   }
   
@@ -1138,13 +1139,15 @@
     #FEATURES
   \*-----------------------------------*/
   
-  .features .section-title { margin-block-end: 40px; }
+  .features .section-title { margin-block-end: 40px;
+ }
   
-  .feature-card { padding: 30px 20px 40px; }
+  .feature-card { padding: 30px 20px 40px;
+ }
   
-  .feature-item:nth-child(2n+1) .feature-card { background-color: var(--eerie-black-3); }
-  
-  .feature-item:nth-child(2n) .feature-card { background-color: var(--smoky-black-3); }
+  .feature-item{
+    background-color:  	#252636;
+  }
   
   .feature-card .card-icon {
     max-width: max-content;
@@ -1476,7 +1479,7 @@
   
     .about .container { gap: 80px; }
   
-    .about-banner > .w-100 { padding-inline-start: 90px; }
+    .about-banner > .w-100 { padding-inline-start: 0px; }
   
     .about .abs-img-1 { width: 285px; }
   
@@ -1801,7 +1804,6 @@
     .footer-brand {
       grid-column: auto;
       order: 1;
-      padding-block: 100px;
     }
   
     .footer-list:last-child { order: 2; }
@@ -1991,7 +1993,6 @@
      * ABOUT
      */
   
-    .about-content { padding-inline-end: 90px; }
   
     .about .shape {
       display: block;

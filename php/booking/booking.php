@@ -46,10 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 $data = "Reservation registered successfully!";
                 echo json_encode($data);
-
-            
             }
-
 
         } catch (PDOException $e) {
             die("Query feiled: " . $e->getMessage());

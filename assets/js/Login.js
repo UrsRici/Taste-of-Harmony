@@ -61,24 +61,24 @@ document.getElementById('form_login').addEventListener('submit', function(event)
 
 function login_error(login_info) 
 {
-    acount_created = true;
+    you_are_log_in = true;
     document.getElementById("error_login_1").innerHTML = "";
     document.getElementById("error_login_2").innerHTML = "";
     document.getElementById("error_login_3").innerHTML = "";
 
-    if (login_info["empty_input"] && acount_created) {
+    if (login_info["empty_input"] && you_are_log_in) {
         document.getElementById("error_login_1").innerHTML = login_info["empty_input"];
-        acount_created = false;
+        you_are_log_in = false;
     }
-    if (login_info["wrong_username"] && acount_created) {
+    if (login_info["wrong_username"] && you_are_log_in) {
         document.getElementById("error_login_2").innerHTML = login_info["wrong_username"];
-        acount_created = false;
+        you_are_log_in = false;
     }
-    if (login_info["wrong_password"] && acount_created) {
+    if (login_info["wrong_password"] && you_are_log_in) {
         document.getElementById("error_login_3").innerHTML = login_info["wrong_password"];
-        acount_created = false;
+        you_are_log_in = false;
     }
-    if (acount_created) {
+    if (you_are_log_in) {
         localStorage.setItem("user", JSON.stringify(login_info));
         alert("Welcome back " + login_info["name"] +"!");
         window.location.href = "Home.html";

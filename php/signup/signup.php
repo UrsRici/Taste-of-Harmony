@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             set_user($pdo, $username, $pwd, $email);
 
-            $signup_info = "Tank you " . $username . " for signing up!";
+            $signup_info = "Thank you " . $username . " for signing up!";
             echo json_encode($signup_info);
 
             die();

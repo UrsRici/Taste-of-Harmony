@@ -2,7 +2,6 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $username = $_POST["username"];
-    //$email = $_POST["email"];
     $pwd = $_POST["password"];
     try {
         require_once "../connect.php";
@@ -28,9 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             
 
-            $signup_info = get_userData($pdo, $username);
-            unset($signup_info["password"]);
-            echo json_encode($signup_info);
+            $login_info = get_userData($pdo, $username);
+            unset($login_info["password"]);
+            echo json_encode($login_info);
 
             $pdo = null;
             $stmt = null;
