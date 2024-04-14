@@ -1049,6 +1049,7 @@
   .menu-card .card-text {
     color: var(--quick-silver);
     line-height: var(--lineHeight-4);
+    background-color: #252636;
   }
   
   .menu-text .span {
