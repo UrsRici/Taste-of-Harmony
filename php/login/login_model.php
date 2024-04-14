@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-function get_username(object $pdo, string $username)
+function get_email(object $pdo, string $email)
 {
-    $query = "SELECT name FROM user WHERE name = :username;";
+    $query = "SELECT email FROM user WHERE email = :email;";
     $stmt = $pdo->prepare($query);
-    $stmt->bindParam(":username", $username);
+    $stmt->bindParam(":email", $email);
     $stmt->execute();
 
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     return $result;
 }
 
-function get_userData(object $pdo, string $username)
+function get_userData(object $pdo, string $email)
 {
-    $query = "SELECT * FROM user WHERE name = :username;";
+    $query = "SELECT * FROM user WHERE email = :email;";
     $stmt = $pdo->prepare($query);
-    $stmt->bindParam(":username", $username);
+    $stmt->bindParam(":email", $email);
     $stmt->execute();
 
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
