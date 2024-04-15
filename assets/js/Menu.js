@@ -91,7 +91,7 @@ const products_li = `
 function display(cat)
 {
     console.log(cat);
-    let header = "assets/images/menu/";
+    let header = "assets/images/menu/icons/";
     let ul_id = "categories_list_add_";
     let product_id = "product_id_";
     let product_img = "product_img_";
