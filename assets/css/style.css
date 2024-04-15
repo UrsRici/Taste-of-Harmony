@@ -440,6 +440,7 @@
     letter-spacing: var(--letterSpacing-3);
     font-weight: var(--weight-bold);
     transition: var(--transition-1);
+    cursor: pointer;
   }
   
   .btn-text:is(:hover, :focus-visible) { color: var(--white); }
@@ -1044,12 +1045,12 @@
   .menu-card .span {
     color: var(--gold-crayola);
     margin-block: 10px;
+    position: absolute;
   }
   
   .menu-card .card-text {
     color: var(--quick-silver);
     line-height: var(--lineHeight-4);
-    background-color: #252636;
   }
   
   .menu-text .span {

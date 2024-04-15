@@ -67,24 +67,24 @@ function display_products(products)
 }
 
 const products_li = `
-    <li style="position: relative;" id="product_id_0">
-        <div class="menu-card hover:card">
-            <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                <img src="" id="product_img_0" width="100" height="100" loading="lazy" alt="Greek Salad" class="img-cover">
-            </figure>
-            <div>
-                <div class="title-wrapper">
-                    <h3 class="title-3">
-                        <a id="product_title_0" class="card-title">Title</a>
-                    </h3>
-                    <span id="product_price_0" class="span title-2">Price$</span>
-                </div>
-                <p id="product_description_0" class="card-text label-1">
-                    Description
-                </p>
+<li id="product_id_0">
+    <div class="menu-card hover:card">
+        <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+            <img src="" id="product_img_0" width="100" height="100" loading="lazy" alt="Greek Salad" class="img-cover">
+        </figure>
+        <div style="width: 100%;">
+            <div class="title-wrapper">
+                <h3 class="title-3">
+                    <a id="product_title_0" class="card-title">Title</a>
+                </h3>
+                <span style="position: inherit; right: 0;" id="product_price_0" class="span title-2">Price$</span>
             </div>
+            <p id="product_description_0" class="card-text label-1">
+                Description
+            </p>
         </div>
-    </li>
+    </div>
+</li>
 `;
 
 
@@ -117,7 +117,7 @@ function display(cat)
             //Inserarea imagini, titlului, pretului si al descrieri
             img.setAttribute('src', header.concat(cat[i][j]['image']))
             title.innerHTML = cat[i][j]['name'];
-            price.innerHTML = cat[i][j]['price'].concat(' $');
+            price.innerHTML = cat[i][j]['price'].concat('$');
             description.innerHTML = cat[i][j]['description']
 
             //Redenumirea id-urilor
@@ -125,12 +125,7 @@ function display(cat)
             img.setAttribute('id', product_img.concat(i*cat.length + j+1));
             title.setAttribute('id', product_title.concat(i*cat.length + j+1));
             price.setAttribute('id', product_price.concat(i*cat.length + j+1));
-            description.setAttribute('id', product_description.concat(i*cat.length + j+1));
-
-
-
-
-            
+            description.setAttribute('id', product_description.concat(i*cat.length + j+1));            
         }
     }
 }
