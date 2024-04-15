@@ -189,6 +189,7 @@ function search(input)
     //console.log(input.value.toUpperCase());
 }
 
+// Functia care afiseaza elementele din search
 function display_dropdown(value)
 {
     if (value) {
@@ -198,8 +199,10 @@ function display_dropdown(value)
     }
 }
 
+// Functia care ascunde elementele din search
 function clear_search () { document.getElementById('dropdown').setAttribute('hidden', true); }
 
+// Functie la input cand dai "Enter" apasa pe butonul de search
 document.getElementById('search').addEventListener("keypress", function(event) {
     // If the user presses the "Enter" key on the keyboard
     if (event.key === "Enter") {
@@ -210,8 +213,9 @@ document.getElementById('search').addEventListener("keypress", function(event) {
     }
 });
 
+// Functia butonul de search
 function select_first_product() 
 {
-    
+
     clear_search();
 }
