@@ -19,26 +19,31 @@ document.getElementById('form_signup').addEventListener('submit', function(event
 function signup_error(signup_info){
 
     acount_created = true;
-    document.getElementById("error_signup_1").innerHTML = "";
-    document.getElementById("error_signup_2").innerHTML = "";
-    document.getElementById("error_signup_3").innerHTML = "";
+    document.getElementById("error_signup").innerHTML = "";
     if (signup_info["empty_input"] && acount_created) {
-        document.getElementById("error_signup_1").innerHTML = signup_info["empty_input"];
+        document.getElementById("error_signup").innerHTML = signup_info["empty_input"];
         acount_created = false;
     }
     if (signup_info["invalid_email"] && acount_created) {
-        document.getElementById("error_signup_2").innerHTML = signup_info["invalid_email"];
+        document.getElementById("error_signup").innerHTML = signup_info["invalid_email"];
         acount_created = false;
     }
     if (signup_info["username_taken"] && acount_created) {
-        document.getElementById("error_signup_3").innerHTML = signup_info["username_taken"];
+        document.getElementById("error_signup").innerHTML = signup_info["username_taken"];
+        acount_created = false;
+    }
+    if (signup_info["email_taken"] && acount_created) {
+        document.getElementById("error_signup").innerHTML = signup_info["email_taken"];
+        acount_created = false;
+    }
+    if (signup_info["password_weak"] && acount_created) {
+        document.getElementById("error_signup").innerHTML = signup_info["password_weak"];
         acount_created = false;
     }
     if (acount_created) {
         alert(signup_info);
         location.reload();
     }
-    
 }
 
 /////////////////
@@ -62,20 +67,18 @@ document.getElementById('form_login').addEventListener('submit', function(event)
 function login_error(login_info) 
 {
     you_are_log_in = true;
-    document.getElementById("error_login_1").innerHTML = "";
-    document.getElementById("error_login_2").innerHTML = "";
-    document.getElementById("error_login_3").innerHTML = "";
+    document.getElementById("error_login").innerHTML = "";
 
     if (login_info["empty_input"] && you_are_log_in) {
-        document.getElementById("error_login_1").innerHTML = login_info["empty_input"];
+        document.getElementById("error_login").innerHTML = login_info["empty_input"];
         you_are_log_in = false;
     }
-    if (login_info["wrong_username"] && you_are_log_in) {
-        document.getElementById("error_login_2").innerHTML = login_info["wrong_username"];
+    if (login_info["wrong_email"] && you_are_log_in) {
+        document.getElementById("error_login").innerHTML = login_info["wrong_email"];
         you_are_log_in = false;
     }
     if (login_info["wrong_password"] && you_are_log_in) {
-        document.getElementById("error_login_3").innerHTML = login_info["wrong_password"];
+        document.getElementById("error_login").innerHTML = login_info["wrong_password"];
         you_are_log_in = false;
     }
     if (you_are_log_in) {

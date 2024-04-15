@@ -28,3 +28,20 @@ function is_username_taken(object $pdo, string $username)
         return false;
     }
 }
+
+function is_email_taken(object $pdo, string $email)
+{
+    if (get_email($pdo, $email)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+function is_password_strong(string $pwd)
+{
+    if (preg_match('/[A-Z]+/', $pwd) && preg_match('/[a-z]+/', $pwd) && preg_match('/[0-9]+/', $pwd)){
+        return true;
+    } else {
+        return false;
+    }
+}
