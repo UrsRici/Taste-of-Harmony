@@ -179,7 +179,7 @@ function search(input)
     for (let i = 0; i < li.length; i++) 
     {
         a = li[i].getElementsByTagName('a')[0];
-        txtValue = a.textContent || a.innerText;
+        txtValue = a.innerHTML;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
         } else {
@@ -216,6 +216,18 @@ document.getElementById('search').addEventListener("keypress", function(event) {
 // Functia butonul de search
 function select_first_product() 
 {
-
-    clear_search();
+    if (document.getElementById('search').value) {
+        let div = document.getElementById('dropdown');
+        let li = div.getElementsByTagName('li');
+        for (let i = 0; i < li.length; i++) 
+        {
+            a = li[i].getElementsByTagName('a')[0];
+            
+            if (!li[i].style.display) {
+                a.click();
+                break;
+            }
+        }
+        clear_search();
+    }
 }

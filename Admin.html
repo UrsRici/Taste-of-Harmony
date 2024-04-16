@@ -124,11 +124,11 @@
             </li>
 
             <li id="admin_page" class="navbar-item">
-                <a href="Admin.html" class="navbar-link hover-underline">
-                  <div class="separator"></div>
-                  <span class="span">Admin</span>
-                </a>
-              </li>
+              <a href="Admin.html" class="navbar-link hover-underline active">
+                <div class="separator"></div>
+                <span class="span">Admin</span>
+              </a>
+            </li>
 
           </ul>
 
@@ -173,81 +173,7 @@
     </header>
 
     <main>
-      <!-- LogIn -->
       
-      <div class="container_login">
-        <input type="checkbox" id="flip">
-        <div class="cover">
-          <div class="front">
-            <img src="assets/images/menu/chia.jpg" alt="">
-            <div class="text" style="background: var(--gold-crayola); opacity: 0.4;"></div>
-            <div class="text">
-              <span class="text-1">Every new friend is a <br> new adventure</span>
-              <span class="text-2">Let's get connected</span>
-            </div>
-          </div>
-          <div class="back">
-            <img src="assets/images/special-dish-banner.jpg" alt="">
-            <div class="text" style="background: var(--gold-crayola); opacity: 0.4;"></div>
-            <div class="text">
-              <span class="text-1">Complete miles of journey <br> with one step</span>
-              <span class="text-2">Let's get started</span>
-            </div>
-          </div>
-        </div>
-        <div class="forms">
-            <div class="form-content">
-              <div class="login-form">
-                <div class="title">Log in</div>
-              <form id="form_login" method="post">
-                <div class="input-boxes">
-                  <div class="input-box">
-<!--email-->      <input id="email" name="email" type="text" placeholder="Enter your email" >
-                  </div>
-                  <div class="input-box">
-<!--password-->     <input id="password" name="password" type="password" placeholder="Enter your password" >
-                  </div>
-                  <div class="button input-box">
-                    <button style="left: 50%;transform: translateX(-50%);" class="btn btn-secondary">
-                      <span style="color: black;" class="text text-1">Submit</span>
-                      <span class="text text-2" aria-hidden="true">Submit</span>
-                    </button>
-                  </div>
-                  <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
-                </div>
-            </form>
-            <p id="error_login" style="color: red;text-align: center;"></p>
-          </div>
-            <div class="signup-form">
-              <div class="title">Sign up</div>
-              <form id="form_signup" method="post">
-                <div class="input-boxes">
-                  <div class="input-box">
-                    <i class="fas fa-user"></i>
-<!--Name-->         <input name="username" type="text" placeholder="Enter your name" >
-                  </div>
-                  <div class="input-box">
-                    <i class="fas fa-envelope"></i>
-<!--email-->        <input name="email" type="text" placeholder="Enter your email" >
-                  </div>
-                  <div class="input-box">
-                    <i class="fas fa-lock"></i>
-<!--password-->     <input name="password" type="password" placeholder="Enter your password" >
-                  </div>
-                  <div class="button input-box">
-                    <button style="left: 50%; transform: translateX(-50%);" class="btn btn-secondary">
-                      <span style="color: black;" class="text text-1">Submit</span>
-                      <span class="text text-2" aria-hidden="true">Submit</span>
-                    </button>
-                  </div>
-                  <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
-                </div>
-              </form>
-              <p id="error_signup" style="color: red;text-align: center;"></p>
-            </div>
-          </div>
-        </div>
-      </div>
 
     </main>
 
@@ -258,7 +184,7 @@
 
     <!--custom js link-->
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/login.js"></script>
+    <script src="assets/js/admin.js"></script>
     <script src="assets/js/common.js"></script>
   </body>
 
