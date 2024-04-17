@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--custom css link-->
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -99,7 +100,6 @@
             <li class="navbar-item">
               <a href="Home.html" class="navbar-link hover-underline">
                 <div class="separator"></div>
-
                 <span class="span">Home</span>
               </a>
             </li>
@@ -107,7 +107,6 @@
             <li class="navbar-item">
               <a href="Aboutus.html" class="navbar-link hover-underline">
                 <div class="separator"></div>
-
                 <span class="span">About Us</span>
               </a>
             </li>
@@ -115,7 +114,6 @@
             <li class="navbar-item">
               <a href="Menu.html" class="navbar-link hover-underline active">
                 <div class="separator"></div>
-
                 <span class="span">Menu</span>
               </a>
             </li>
@@ -123,10 +121,16 @@
             <li class="navbar-item">
               <a href="Booking.html" class="navbar-link hover-underline">
                 <div class="separator"></div>
-
                 <span class="span">Reservations</span>
               </a>
             </li>
+
+            <li id="admin_page" class="navbar-item">
+                <a href="Admin.html" class="navbar-link hover-underline">
+                  <div class="separator"></div>
+                  <span class="span">Admin</span>
+                </a>
+              </li>
 
           </ul>
 
@@ -171,43 +175,23 @@
 
     <main>
       <div>
+
         <!--Pop Modal-->
-        <div id="#modal"  class="modal">
+        <div id="#modal" class="modal">
           <div class="modal_container">
-            <div class="modal_img">
-              <img src="assets/images/hero-slider-1.jpg" alt="">
-            </div>
+            <button onclick="active_item(null)" data-modal-close>&#x2716;</button>
+            <img id="modal_img" src="assets/images/menu/chia.jpg" alt="img">
             <div class="modal_body">
-
-              <button onclick="active_item()" data-modal-close>&#x2716;</button>
-
-              <img src="assets/images/badge-1.png" alt="badge">
-
-              <p class="">Special Dish</p>
-
-              <h2 class="">Lobster Tortellini</h2>
-
-              <p class="section-text">
-                Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the
-                industrys standard dummy text ever since the when an unknown printer took a galley of type.
-              </p>
-
-              <div class="">
-                <span class="">$20.00</span>
-              </div>
-
-              <a href="#" class="btn btn-primary">
-                <span class="text text-1">View All Menu</span>
-                <span class="text text-2" aria-hidden="true">View All Menu</span>
-              </a>
-            
+              <p id="modal_title" class="title">[Title]</p>
+              <p class="desctiption">Description:</p>
+              <p id="modal_description" class="desctiption">[Text]</p>
+              <p id="modal_price" class="price">[Price]</p>
             </div>
-            
           </div>
         </div>
-        <div onclick="active_item()" id="#modal_overlay" class="modal_overlay"></div>
+        <div onclick="active_item(null)" id="#modal_overlay" class="modal_overlay"></div>
 
-        <!--#Categorii-->
+        <!--Categorii-->
         <section style="padding-top: 200px;" class="section service bg-black-10 text-center" aria-label="service">
           <div class="container">
 
@@ -218,48 +202,48 @@
 
               <li>
                 <div class="service-card">
-                  <a href="#1" class="has-before hover:shine">
+                  <a href="#categorie_1" class="has-before hover:shine">
                     <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
                       <img id="img_categories_1" width="285" height="336" loading="lazy" class="img-cover">
                     </figure>
                   </a>
                   <div class="card-content">
                     <h3 class="title-4 card-title">
-                      <a name="title_categories_1" href="#1">Title</a>
+                      <a name="title_categories_1" href="#categorie_1">Title</a>
                     </h3>
-                    <a href="#1" class="btn-text hover-underline label-2">View Menu</a>
+                    <a href="#categorie_1" class="btn-text hover-underline label-2">View Menu</a>
                   </div>
                 </div>
               </li>
 
               <li>
                 <div class="service-card">
-                  <a href="#2" class="has-before hover:shine">
+                  <a href="#categorie_2" class="has-before hover:shine">
                     <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
                       <img id="img_categories_2" width="285" height="336" loading="lazy" class="img-cover">
                     </figure>
                   </a>
                   <div class="card-content">
                     <h3 class="title-4 card-title">
-                      <a name="title_categories_2" href="#2">Title</a>
+                      <a name="title_categories_2" href="#categorie_2">Title</a>
                     </h3>
-                    <a href="#2" class="btn-text hover-underline label-2">View Menu</a>
+                    <a href="#categorie_2" class="btn-text hover-underline label-2">View Menu</a>
                   </div>
                 </div>
               </li>
               
               <li>
                 <div class="service-card">
-                  <a href="#3" class="has-before hover:shine">
+                  <a href="#categorie_3" class="has-before hover:shine">
                     <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
                       <img id="img_categories_3" width="285" height="336" loading="lazy" class="img-cover">
                     </figure>
                   </a>
                   <div class="card-content">
                     <h3 class="title-4 card-title">
-                      <a name="title_categories_3" href="#3">Title</a>
+                      <a name="title_categories_3" href="#categorie_3">Title</a>
                     </h3>
-                    <a href="#3" class="btn-text hover-underline label-2">View Menu</a>
+                    <a href="#categorie_3" class="btn-text hover-underline label-2">View Menu</a>
                   </div>
                 </div>
               </li>
@@ -270,48 +254,48 @@
 
               <li>
                 <div class="service-card">
-                  <a href="#4" class="has-before hover:shine">
+                  <a href="#categorie_4" class="has-before hover:shine">
                     <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
                       <img id="img_categories_4" width="285" height="336" loading="lazy" class="img-cover">
                     </figure>
                   </a>
                   <div class="card-content">
                     <h3 class="title-4 card-title">
-                      <a name="title_categories_4" href="#4">Title</a>
+                      <a name="title_categories_4" href="#categorie_4">Title</a>
                     </h3>
-                    <a href="#4" class="btn-text hover-underline label-2">View Menu</a>
+                    <a href="#categorie_4" class="btn-text hover-underline label-2">View Menu</a>
                   </div>
                 </div>
               </li>
 
               <li>
                 <div class="service-card">
-                  <a href="#5" class="has-before hover:shine">
+                  <a href="#categorie_5" class="has-before hover:shine">
                     <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
                       <img id="img_categories_5" width="285" height="336" loading="lazy" class="img-cover">
                     </figure>
                   </a>
                   <div class="card-content">
                     <h3 class="title-4 card-title">
-                      <a name="title_categories_5" href="#5">Title</a>
+                      <a name="title_categories_5" href="#categorie_5">Title</a>
                     </h3>
-                    <a href="#5" class="btn-text hover-underline label-2">View Menu</a>
+                    <a href="#categorie_5" class="btn-text hover-underline label-2">View Menu</a>
                   </div>
                 </div>
               </li>
               
               <li>
                 <div class="service-card">
-                  <a href="#6" class="has-before hover:shine">
+                  <a href="#categorie_6" class="has-before hover:shine">
                     <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
                       <img id="img_categories_6" width="285" height="336" loading="lazy" class="img-cover">
                     </figure>
                   </a>
                   <div class="card-content">
                     <h3 class="title-4 card-title">
-                      <a name="title_categories_6" href="#6">Title</a>
+                      <a name="title_categories_6" href="#categorie_6">Title</a>
                     </h3>
-                    <a href="#6" class="btn-text hover-underline label-2">View Menu</a>
+                    <a href="#categorie_6" class="btn-text hover-underline label-2">View Menu</a>
                   </div>
                 </div>
               </li>
@@ -322,48 +306,48 @@
 
               <li>
                 <div class="service-card">
-                  <a href="#7" class="has-before hover:shine">
+                  <a href="#categorie_7" class="has-before hover:shine">
                     <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
                       <img id="img_categories_7" width="285" height="336" loading="lazy" class="img-cover">
                     </figure>
                   </a>
                   <div class="card-content">
                     <h3 class="title-4 card-title">
-                      <a name="title_categories_7" href="#7">Title</a>
+                      <a name="title_categories_7" href="#categorie_7">Title</a>
                     </h3>
-                    <a href="#7" class="btn-text hover-underline label-2">View Menu</a>
+                    <a href="#categorie_7" class="btn-text hover-underline label-2">View Menu</a>
                   </div>
                 </div>
               </li>
 
               <li>
                 <div class="service-card">
-                  <a href="#8" class="has-before hover:shine">
+                  <a href="#categorie_8" class="has-before hover:shine">
                     <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
                       <img id="img_categories_8" width="285" height="336" loading="lazy" class="img-cover">
                     </figure>
                   </a>
                   <div class="card-content">
                     <h3 class="title-4 card-title">
-                      <a name="title_categories_8" href="#8">Title</a>
+                      <a name="title_categories_8" href="#categorie_8">Title</a>
                     </h3>
-                    <a href="#8" class="btn-text hover-underline label-2">View Menu</a>
+                    <a href="#categorie_8" class="btn-text hover-underline label-2">View Menu</a>
                   </div>
                 </div>
               </li>
 
               <li>
                 <div class="service-card">
-                  <a href="#9" class="has-before hover:shine">
+                  <a href="#categorie_9" class="has-before hover:shine">
                     <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
                       <img id="img_categories_9" width="285" height="336" loading="lazy" class="img-cover">
                     </figure>
                   </a>
                   <div class="card-content">
                     <h3 class="title-4 card-title">
-                      <a name="title_categories_9" href="#9">Title</a>
+                      <a name="title_categories_9" href="#categorie_9">Title</a>
                     </h3>
-                    <a href="#9" class="btn-text hover-underline label-2">View Menu</a>
+                    <a href="#categorie_9" class="btn-text hover-underline label-2">View Menu</a>
                   </div>
                 </div>
               </li>
@@ -378,16 +362,30 @@
           </div>
         </section>
 
-        <!--#MENU-->
-
-        <section style="margin-bottom: -150px;" class="section menu" aria-label="menu-label" id="Drinks">
+        <!--Menu text-->
+        <section style="margin-bottom: -100px;" class="section menu" aria-label="menu-label">
           <p style="font-size: 75px; text-align: center;" class="label-2 section-subtitle" id="about-label">Menu</p>
         </section>
 
-        <!--#Categories-->
+        <!--Search-->
+        <div style="margin-top: 100px;">
+          <div class="container">
+            <div class="form_search">
+              <div class="search_input">
+                <input id="search" type="text" placeholder="Search..." autocomplete="off">
+                <div id="dropdown" hidden>
+                </div>
+              </div>
+              <div class="search_button">
+                <button onclick="select_first_product()" id="search_button_icon" class="search_button_icon"><i class="fa fa-search"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <section style="margin-bottom: -150px;" class="section menu" aria-label="menu-label" id="categories_1">
-          <div id="1" class="container">
+        <!--Categories Items-->             
+        <section style="margin-bottom: -150px;" class="section menu" aria-label="menu-label" id="categorie_1">
+          <div class="container">
             <h2 name="title_categories_1" style="text-align: left;" class="headline-1 section-title text-center">Title</h2>
             <ul id="categories_list_add_1" class="grid-list">
 
@@ -400,8 +398,8 @@
           </div>
         </section>
         
-        <section style="margin-bottom: -150px;" class="section menu" aria-label="menu-label" id="categories_2">
-          <div id="2" class="container">
+        <section style="margin-bottom: -150px;" class="section menu" aria-label="menu-label" id="categorie_2">
+          <div class="container">
             <h2 name="title_categories_2" style="text-align: left;" class="headline-1 section-title text-center">Title</h2>
             <ul id="categories_list_add_2" class="grid-list">
 
@@ -414,8 +412,8 @@
           </div>
         </section>
 
-        <section style="margin-bottom: -150px;" class="section menu" aria-label="menu-label" id="categories_3">
-          <div id="3" class="container">
+        <section style="margin-bottom: -150px;" class="section menu" aria-label="menu-label" id="categorie_3">
+          <div class="container">
             <h2 name="title_categories_3" style="text-align: left;" class="headline-1 section-title text-center">Title</h2>
             <ul id="categories_list_add_3" class="grid-list">
 
@@ -428,8 +426,8 @@
           </div>
         </section>
 
-        <section style="margin-bottom: -150px;" class="section menu" aria-label="menu-label" id="categories_4">
-          <div id="4" class="container">
+        <section style="margin-bottom: -150px;" class="section menu" aria-label="menu-label" id="categorie_4">
+          <div class="container">
             <h2 name="title_categories_4" style="text-align: left;" class="headline-1 section-title text-center">Title</h2>
             <ul id="categories_list_add_4" class="grid-list">
 
@@ -442,8 +440,8 @@
           </div>
         </section>
 
-        <section style="margin-bottom: -150px;" class="section menu" aria-label="menu-label" id="categories_5">
-          <div id="5" class="container">
+        <section style="margin-bottom: -150px;" class="section menu" aria-label="menu-label" id="categorie_5">
+          <div class="container">
             <h2 name="title_categories_5" style="text-align: left;" class="headline-1 section-title text-center">Title</h2>
             <ul id="categories_list_add_5" class="grid-list">
 
@@ -456,8 +454,8 @@
           </div>
         </section>
 
-        <section style="margin-bottom: -150px;" class="section menu" aria-label="menu-label" id="categories_6">
-          <div id="6" class="container">
+        <section style="margin-bottom: -150px;" class="section menu" aria-label="menu-label" id="categorie_6">
+          <div class="container">
             <h2 name="title_categories_6" style="text-align: left;" class="headline-1 section-title text-center">Title</h2>
             <ul id="categories_list_add_6" class="grid-list">
 
@@ -470,8 +468,8 @@
           </div>
         </section>
 
-        <section style="margin-bottom: -150px;" class="section menu" aria-label="menu-label" id="categories_7">
-          <div id="7" class="container">
+        <section style="margin-bottom: -150px;" class="section menu" aria-label="menu-label" id="categorie_7">
+          <div class="container">
             <h2 name="title_categories_7" style="text-align: left;" class="headline-1 section-title text-center">Title</h2>
             <ul id="categories_list_add_7" class="grid-list">
 
@@ -484,8 +482,8 @@
           </div>
         </section>
 
-        <section style="margin-bottom: -150px;" class="section menu" aria-label="menu-label" id="categories_8">
-          <div id="8" class="container">
+        <section style="margin-bottom: -150px;" class="section menu" aria-label="menu-label" id="categorie_8">
+          <div class="container">
             <h2 name="title_categories_8" style="text-align: left;" class="headline-1 section-title text-center">Title</h2>
             <ul id="categories_list_add_8" class="grid-list">
 
@@ -498,8 +496,8 @@
           </div>
         </section>
 
-        <section style="margin-bottom: -150px;" class="section menu" aria-label="menu-label" id="categories_9">
-          <div id="9" class="container">
+        <section style="margin-bottom: -150px;" class="section menu" aria-label="menu-label" id="categorie_9">
+          <div class="container">
             <h2 name="title_categories_9" style="text-align: left;" class="headline-1 section-title text-center">Title</h2>
             <ul id="categories_list_add_9" class="grid-list">
 
