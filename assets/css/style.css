@@ -2589,4 +2589,73 @@ body{
   background-color: #00001c;
   border-radius: 5px;
 }
+.admin_user_table{
+  overflow: auto;
+  scrollbar-color: var(--gold-crayola) #00001c;
+  background-color: var(--gold-crayola);
+  color: #000000;
+  padding: 5px 10px;
+  width: 100%;
+  font-size: 12px;
+}
+.admin_user_table table{
+  width: 100%;
+  border: 1px solid black;
+  background-color: #00000057;
+  border-radius: 3px;
+}
+.admin_user_table table thead{
+  cursor: pointer;
+}
+.admin_user_table table th,td{
+  background-color: var(--gold-crayola);
+  text-align: center;
+  padding: 0 5px;
+  border-radius: 1px;
+}
+.edite_button{ cursor: pointer; }
+.edite_button:hover{
+  transition-duration: 200ms;
+  background-color: rgba(0, 128, 0, 0.5);
+  color: white;
+}
+.edite_button.active{
+  transition-duration: 200ms;
+  background-color: rgba(0, 128, 0, 0.5);
+  color: white;
+}
+.delete_button{ cursor: pointer; }
+.delete_button:hover{
+  transition-duration: 200ms;
+  background-color: rgba(255, 0, 0, 0.5);
+  color: white;
+}
+.add_button{
+  text-align: center;
+  cursor: pointer;
+  border: #000000 solid 1px;
+  border-radius: 3px;
+}
+.add_button.active{
+  transition-duration: 200ms;
+  background-color: rgba(0, 0, 255, 0.5);
+  color: white;
+}
+.add_button:hover{
+  transition-duration: 200ms;
+  background-color: rgba(0, 0, 255, 0.5);
+  color: white;
+}
+.admin_add_user{
+  background-color: var(--gold-crayola);
+  color: #000000;
+  padding: 5px 10px;
+}
+.admin_add_user input, select{
+  width: auto;
+  padding: 5px 10px;
+  border-radius: 2px;
+  border: #000000 solid 1px;
+  margin-bottom: 10px;
+}
 
