@@ -172,7 +172,7 @@
       </div>
     </header>
 
-    <main>
+    <main style="margin-bottom: 100px;">
         
         <!--Title tables-->
         <div style="margin-top: 250px;" aria-label="menu-label">
@@ -188,11 +188,56 @@
 
         <!--Users table-->
         <div hidden id="title_1_table" aria-label="menu-label">
-            <div class="container">
-                <div style="background-color: var(--gold-crayola);">
-                    USERS
-                </div>
+          <div class="container">
+
+            <!--Table-->  
+            <div class="admin_user_table">
+              <!--Name coloana-->  
+              <table id="user_table">
+                <thead>
+                  <tr>
+                    <th id="id_button" onclick="sort_table_id()">Id</th>
+                    <th id="name_button" onclick="sort_table_name()">Name</th>
+                    <th style="cursor: default;">Email</th>
+                    <th style="cursor: default;">Role</th>
+                    <th id="add_button" class="add_button" colspan="2" onclick="display_addUser_button()">Add User</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+              </table>
             </div>
+
+             <!--Form add user-->
+            <div hidden id="admin_add_user" class="admin_add_user">
+              <form id="add_user">
+                <p>Add User:</p>
+                <input type="text" name="username" id="username_add" placeholder="Name">
+                <input type="text" name="email" id="email_add" placeholder="Emali">
+                <input type="password" name="password" id="password_add" placeholder="Password">
+                <select name="role" style="display: inline;">
+                  <option value="basic">basic</option>
+                  <option value="admin">admin</option>
+                </select>
+                <button class="add_button" style="padding: 2px 15px; margin-left: 60px; display: inline;">Submit</button>
+              </form>
+            </div>
+
+            <!--Form edit user-->
+            <div hidden id="admin_edit_user" class="admin_add_user">
+              <form id="edit_user">
+                <p style="display: inline;" >Edit User: </p><p style="display: inline;" id="edit_user_id">5</p>
+                <input type="text" name="username" id="username" placeholder="Name">
+                <input type="text" name="email" id="email" placeholder="Emali">
+                <select name="role" id="role" style="display: inline;">
+                  <option value="basic">basic</option>
+                  <option value="admin">admin</option>
+                </select>
+                <button class="add_button" style="padding: 2px 15px; margin-left: 60px; display: inline;">Submit</button>
+              </form>
+            </div>
+
+          </div>
         </div>
 
         <!--Categories title-->
