@@ -16,7 +16,7 @@ function admin_title(id)
 {
     let cls = id.slice(0, -1);
     //eleiminare atribute active
-    for (let i = 1; i < 5; i++) 
+    for (let i = 1; i < 4; i++) 
     {
         document.getElementById(cls+i).removeAttribute('class');
         document.getElementById(cls+i+'_table').setAttribute('hidden', true);
@@ -69,7 +69,7 @@ let delete_button = `<td id="delete_button" class="delete_button">Delete</td>`;
 let edit_button = `<td id="edit_button" class="edite_button">Edit</td>`;
 function display_users()
 {
-    console.log(users);
+    //console.log(users);
     document.getElementById('tbody').innerHTML = ' ';
     const row_html = `<tr id="user_row_"></tr>`;
     const row_item_html = `<th id="user_row_item_"></th>`;
@@ -89,7 +89,7 @@ function display_users()
         row.innerHTML += edit_button + delete_button;
         b_edit = document.getElementById('edit_button');
         b_delete = document.getElementById('delete_button');
-        b_edit.setAttribute('onclick', 'edite_user('.concat(i).concat(')'));
+        b_edit.setAttribute('onclick', 'edit_user('.concat(i).concat(')'));
         b_delete.setAttribute('onclick', 'delete_user('.concat(i).concat(')'));
         b_edit.setAttribute('id', 'edit_'.concat(i));
         b_delete.removeAttribute('id');
@@ -164,7 +164,7 @@ function display_addUser_button()
 }
 
 //Edit user function
-function edite_user(nr)
+function edit_user(nr)
 {
     for (let i = 0; i < users.length; i++)
     {   
@@ -260,7 +260,48 @@ document.getElementById('add_user').addEventListener('submit', function(event) {
 
 function display_products()
 {
-    console.log(products);
+    //console.log(products);
+    document.getElementById('tbody_1').innerHTML = ' ';
+    const row_html = `<tr id="prod_row_"></tr>`;
+    const row_item_html = `<th id="prod_row_item_"></th>`;
+
+    for (let i = 0; i < products.length; i++) 
+    {
+        let categorie = products[i]['category_id'];
+        const tbody = document.getElementById('tbody_'.concat(categorie));
+        tbody.innerHTML += row_html;
+        row = document.getElementById('prod_row_');   
+        row.setAttribute('id', 'prod_row_'.concat(i+1));  
+        for (var key in products[i])
+        {
+            if (key != 'category_id') {
+                row.innerHTML += row_item_html;
+                item = document.getElementById('prod_row_item_');
+                item.innerHTML = products[i][key];
+                item.setAttribute('id', 'prod_row_item_'.concat(key));
+            }
+        }
+        row.innerHTML += edit_button + delete_button;
+        b_edit = document.getElementById('edit_button');
+        b_delete = document.getElementById('delete_button');
+        b_edit.setAttribute('onclick', 'edit_products('.concat(i).concat(')'));
+        b_delete.setAttribute('onclick', 'delete_products('.concat(i).concat(')'));
+        b_edit.setAttribute('id', String(categorie).concat('_edit_').concat(i));
+        b_delete.removeAttribute('id');
+    
+    }
+}
+
+function delete_products(nr)
+{
+    console.log("Edit:");
+    console.log(products[nr]);
+}
+
+function edit_products(nr)
+{
+    console.log("Delete:");
+    console.log(products[nr]);
 }
 
 //////////////////////////////////
@@ -270,4 +311,39 @@ function display_products()
 function display_reservations()
 {
     console.log(reservations);
+    document.getElementById('tbody_res').innerHTML = ' ';
+    const row_html = `<tr id="res_row_"></tr>`;
+    const row_item_html = `<th id="res_row_item_"></th>`;
+    const tbody = document.getElementById('tbody_res');
+    for (let i = 0; i < reservations.length; i++) 
+    {
+        tbody.innerHTML += row_html;
+        row = document.getElementById('res_row_');   
+        row.setAttribute('id', 'res_row_'.concat(i+1));  
+        for (var key in reservations[i])
+        {
+            row.innerHTML += row_item_html;
+            item = document.getElementById('res_row_item_');
+            item.innerHTML = reservations[i][key];
+            item.setAttribute('id', 'res_row_item_'.concat(key));
+        }
+        row.innerHTML += edit_button + delete_button;
+        b_edit = document.getElementById('edit_button');
+        b_delete = document.getElementById('delete_button');
+        b_edit.setAttribute('onclick', 'edit_reservation('.concat(i).concat(')'));
+        b_delete.setAttribute('onclick', 'delete_reservation('.concat(i).concat(')'));
+        b_edit.setAttribute('id', 'res_edit_'.concat(i));
+        b_delete.removeAttribute('id');
+    }
+}
+function delete_reservations(nr)
+{
+    console.log("Edit:");
+    console.log(reservations[nr]);
+}
+
+function edit_reservations(nr)
+{
+    console.log("Delete:");
+    console.log(reservations[nr]);
 }
