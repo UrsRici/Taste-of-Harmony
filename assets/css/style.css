@@ -491,11 +491,12 @@ margin-block-end: 20px;
 }
 
 .icon-wrapper .input-field {
-  margin-block-end: 0;
-  padding-inline-start: 40px;
-  appearance: none;
-  cursor: pointer;
-  background-color: #00001c;
+margin-block-end: 0;
+padding-inline-start: 40px;
+appearance: none;
+cursor: pointer;
+width: 100%;
+background-color: #00001c;
 }
 
 .icon-wrapper ion-icon {
@@ -2589,14 +2590,14 @@ color: var(--gold-crayola);
 background-color: #00001c;
 border-radius: 5px;
 }
-.admin_user_table{
-  overflow: auto;
-  scrollbar-color: var(--gold-crayola) #00001c;
-  background-color: var(--gold-crayola);
-  color: #000000;
-  padding: 5px 10px;
-  width: 100%;
-  font-size: 12px;
+.admin_table{
+overflow: auto;
+scrollbar-color: var(--gold-crayola) #00001c;
+background-color: var(--gold-crayola);
+color: #000000;
+padding: 5px 10px;
+width: 100%;
+font-size: 15px;
 }
 .admin_table table{
 width: 100%;
