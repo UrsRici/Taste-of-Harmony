@@ -310,7 +310,7 @@ function edit_products(nr)
 
 function display_reservations()
 {
-    console.log(reservations);
+    //console.log(reservations);
     document.getElementById('tbody_res').innerHTML = ' ';
     const row_html = `<tr id="res_row_"></tr>`;
     const row_item_html = `<th id="res_row_item_"></th>`;
@@ -336,13 +336,13 @@ function display_reservations()
         b_delete.removeAttribute('id');
     }
 }
-function delete_reservations(nr)
+function delete_reservation(nr)
 {
     console.log("Edit:");
     console.log(reservations[nr]);
 }
 
-function edit_reservations(nr)
+function edit_reservation(nr)
 {
     console.log("Delete:");
     console.log(reservations[nr]);
