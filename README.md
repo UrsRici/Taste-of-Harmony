@@ -1,3 +1,6 @@
+![logo](https://github.com/user-attachments/assets/22deec86-9794-4ac9-8ae1-fd9529d72478)
+
+
 Taste of Harmony este o aplicație web modernă dezvoltată cu tehnologii web de bază: HTML (vanilla), CSS, JavaScript pentru partea de interfață, iar PHP pentru logica de backend. Aplicația se conectează la o bază de date realizată în SQL, care gestionează eficient utilizatorii, rezervările și meniul restaurantului.
 
 Platforma oferă o experiență interactivă și intuitivă pentru utilizatori. Aceștia își pot crea un cont personal, prin care pot face rezervări online și pot vizualiza meniul complet al restaurantului. De asemenea, aplicația include o funcționalitate de căutare inteligentă, care permite identificarea rapidă a preparatelor dorite din meniu.
